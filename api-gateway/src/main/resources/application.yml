@@ -1,1 +1,24 @@
+server:
+  port: 8090
 
+spring:
+  application:
+    name: api-gateway
+
+zuul:
+  routes:
+    order:
+      serviceId: po
+      path: /catalog/*/order/**
+      stripPrefix: false
+    catalog:
+      serviceId: catalog
+      path: /catalog/**
+      stripPrefix: false
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka
