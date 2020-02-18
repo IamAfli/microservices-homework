@@ -5,3 +5,13 @@ spring:
     mongodb:
       host: localhost
       name: embeded_db
+  application:
+    name: catalog
+logging:
+  level:
+    org:
+      nipu: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka/
