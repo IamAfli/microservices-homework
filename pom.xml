@@ -27,5 +27,7 @@
     <modules>
         <module>pc</module>
         <module>po</module>
+        <module>sr-and-ds</module>
+        <module>api-gateway</module>
     </modules>
 </project>
